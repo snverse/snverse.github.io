@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/snverse.github.io/
+    - /bin/cp index.html $DEPLOYPATH
