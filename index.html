@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>dep13's Webpage</title>
+    <title>dep13's Assign2</title>
   </head>
   <body>
     <main>
+		<h2><a href="toc.html">All Assignments</a></h2>
 		<center>
 			<!-- Required information from the assignment specifications -->
-        	<h1>Assignment 1: A Basic HTML Page</h1>
+        	<!-- <h1>Assignment 1: A Basic HTML Page</h1>  From assignment 1 -->
+			<h1>Assignment 2: Time of Day</h1>
 
 			<h2>Information:</h2>
 			Name: Davis Phillips<br>
 			Course: COP4813<br>
 			Major: Computer Science<br>
-			Message: Welcome to my site!<br>
+			<!-- Message: Welcome to my site!<br>  From assignment 1 -->
+			Message: Welcome to my dynamic webpage!<br> 
+
+			<!-- The script is addeded for assignment 2 -->
+			<script>
+				//get date and bgcolor
+				const now = new Date();
+				const element = document.getElementById('myElement');
+
+				// format time
+				let curHour = now.getHours()
+
+				// change time
+				document.getElementById("time").innerHTML = curHour;
+
+				/* change bgcolor
+				6am-12pm red, 12-6pm yellow, 6-9pm blue, 9pm-6am green
+				*/
+				if (curHour < 6) {
+					document.body.style.backgroundColor = 'green';
+				} else if (curHour < 12) {
+					document.body.style.backgroundColor = 'red';
+				} else if (curHour < 18) {
+					document.body.style.backgroundColor = 'yellow';
+				} else if (curHour < 21) {
+					document.body.style.backgroundColor = 'blue';
+				} else {
+					document.body.style.backgroundColor = 'green';
+				}
+			</script>
 		</center>
     </main>
   </body>
