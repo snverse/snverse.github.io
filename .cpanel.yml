@@ -3,5 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/snverse/snverse.github.io/
     - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp assign1.html $DEPLOYPATH
-    - /bin/cp toc.html $DEPLOYPATH
