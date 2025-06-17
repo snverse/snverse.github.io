@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>dep13's Assign2</title>
-  </head>
-  <body>
-    <main>
-		<center>
-			<!-- Required information from the assignment specifications -->
-        	<!-- <h1>Assignment 1: A Basic HTML Page</h1>  From assignment 1 -->
-			<!--<h1>Assignment 2: Time of Day</h1> -->
-			<h1>Assignment 3: Time-Based Image Display Webpage</h1>
 
-			<h2>Information:</h2>
-			Name: Davis Phillips<br>
-			Course: COP4813<br>
-			Major: Computer Science<br>
-			<!-- Message: Welcome to my site!<br>  From assignment 1 -->
-			<!-- Message: Welcome to my dynamic webpage!<br> From assignment 2 -->
-			<!-- For assignment 3 -->
-			Message: Welcome to my dynamic Picture webpage!<br>
-			<img id='picture' src='https://cdn.pixabay.com/photo/2015/06/09/16/12/error-803716_960_720.png'>
+<head>
+	<title>dep13's Assign4</title>
+	<link rel="stylesheet" href="style.css">
+</head>
 
-			<!-- The script is added for assignment 2 -->
-			<script>
-				//get date and bgcolor
-				const now = new Date();
+<body>
+	<main>
+		<h1>Assignment 4: Nested Menu Navigation Webpage</h1>
 
-				// format time
-				let curHour = now.getHours()
+		<h2>Information:</h2>
+		Name: Davis Phillips<br>
+		Course: COP4813<br>
+		Major: Computer Science<br>
+		Message: Welcome to my nested menu website!<br>
 
-				/* change bgcolor
-				6am-12pm red, 12-6pm yellow, 6-9pm blue, 9pm-6am green
-				*/
-				if (curHour < 6) {
-					document.body.style.backgroundColor = 'green';
-				} else if (curHour < 12) {
-					document.body.style.backgroundColor = 'red';
-				} else if (curHour < 18) {
-					document.body.style.backgroundColor = 'yellow';
-				} else if (curHour < 21) {
-					document.body.style.backgroundColor = 'blue';
-				} else {
-					document.body.style.backgroundColor = 'green';
-				}
+		<!-- Required information from the assignment specifications -->
+		<!-- <h1>Assignment 1: A Basic HTML Page</h1>  From assignment 1 -->
+		<!--<h1>Assignment 2: Time of Day</h1> -->
+		<h1>Assignment 3: Time-Based Image Display Webpage</h1>
 
-				/*
-				Added logic to change the picture for assignment 3.
-				adjusts picture width to roughly a 4th of the screen size.
-				12am-6pm night pic, 6am-12pm morning pic, 12pm-6pm afternoon pic, 6pm-12am might pic
-				*/
+		<h2>Information:</h2>
+		Name: Davis Phillips<br>
+		Course: COP4813<br>
+		Major: Computer Science<br>
+		<!-- Message: Welcome to my site!<br>  From assignment 1 -->
+		<!-- Message: Welcome to my dynamic webpage!<br> From assignment 2 -->
+		<!-- For assignment 3 -->
+		Message: Welcome to my dynamic Picture webpage!<br>
+		<img id='picture' src='https://cdn.pixabay.com/photo/2015/06/09/16/12/error-803716_960_720.png'>
 
-				const scrnWidth = screen.availWidth/4;
-				document.getElementById('picture').style="width:" + scrnWidth + "px";
+		<!-- The script is added for assignment 2 -->
+		<script>
+			//get date and bgcolor
+			const now = new Date();
+			// format time
+			let curHour = now.getHours();
+			/* change bgcolor
+			6am-12pm red, 12-6pm yellow, 6-9pm blue, 9pm-6am green
+			*/
+			if (curHour < 6) {
+				document.body.style.backgroundColor = 'green';
+			} else if (curHour < 12) {
+				document.body.style.backgroundColor = 'red';
+			} else if (curHour < 18) {
+				document.body.style.backgroundColor = 'yellow';
+			} else if (curHour < 21) {
+				document.body.style.backgroundColor = 'blue';
+			} else {
+				document.body.style.backgroundColor = 'green';
+			}
+			/*
+			Added logic to change the picture for assignment 3.
+			adjusts picture width to roughly a 4th of the screen size.
+			12am-6pm night pic, 6am-12pm morning pic, 12pm-6pm afternoon pic, 6pm-12am might pic
+			*/
 
-				if (curHour < 6){
-					document.getElementById('picture').src='https://cdn.pixabay.com/photo/2023/01/28/06/57/man-7750139_960_720.png'
-				} else if (curHour < 12) {
-					document.getElementById('picture').src='https://cdn.pixabay.com/photo/2021/05/25/14/50/primroses-6282676_960_720.png'
-				} else if (curHour < 18) {
-					document.getElementById('picture').src='https://cdn.pixabay.com/photo/2014/03/25/16/32/summer-297302_960_720.png'
-				} else {
-					document.getElementById('picture').src='https://cdn.pixabay.com/photo/2023/01/28/06/57/man-7750139_960_720.png'
-				}
-			</script>
-		</center>
-    </main>
-  </body>
+			const scrnWidth = screen.availWidth / 4;
+			document.getElementById('picture').style = "width:" + scrnWidth + "px";
+
+			if (curHour < 6) {
+				document.getElementById('picture').src = 'https://cdn.pixabay.com/photo/2023/01/28/06/57/man-7750139_960_720.png'
+			} else if (curHour < 12) {
+				document.getElementById('picture').src = 'https://cdn.pixabay.com/photo/2021/05/25/14/50/primroses-6282676_960_720.png'
+			} else if (curHour < 18) {
+				document.getElementById('picture').src = 'https://cdn.pixabay.com/photo/2014/03/25/16/32/summer-297302_960_720.png'
+			} else {
+				document.getElementById('picture').src = 'https://cdn.pixabay.com/photo/2023/01/28/06/57/man-7750139_960_720.png'
+			}
+		</script>
+	</main>
+</body>
+
 </html>
