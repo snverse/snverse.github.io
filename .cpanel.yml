@@ -3,3 +3,15 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/snverse/snverse.github.io/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp cars/bmw.html $DEPLOYPATH
+    - /bin/cp cars/ford.html $DEPLOYPATH
+    - /bin/cp cars/honda.html $DEPLOYPATH
+    - /bin/cp cars/toyota.html $DEPLOYPATH
+    - /bin/cp cheese/blue.html $DEPLOYPATH
+    - /bin/cp cheese/cheddar.html $DEPLOYPATH
+    - /bin/cp cheese/gruyere.html $DEPLOYPATH
+    - /bin/cp cheese/munster.html $DEPLOYPATH
+    - /bin/cp guitars/custom24.html $DEPLOYPATH
+    - /bin/cp guitars/lespaul.html $DEPLOYPATH
+    - /bin/cp guitars/stratocaster.html $DEPLOYPATH
+    - /bin/cp guitars/telecaster.html $DEPLOYPATH

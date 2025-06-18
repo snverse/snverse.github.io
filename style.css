@@ -1,4 +1,8 @@
 * {
+    
+}
+
+main {
     text-align: center;
 }
 
@@ -8,9 +12,26 @@ ul {
 
 ul li {
     list-style: none;
-    display: inline-block;
 }
 
 ul li a {
-    
+    text-decoration: none;
+    color: black;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: orange;
+}
+
+.hiddenCars {
+    display: none;
+}
+
+.hiddenCheese {
+    display: none;
+}
+
+.hiddenGuitars {
+    display: none;
 }

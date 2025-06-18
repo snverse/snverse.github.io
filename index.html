@@ -8,6 +8,7 @@
 
 <body>
 	<main>
+		<!-- Updated for Assign 4 -->
 		<h1>Assignment 4: Nested Menu Navigation Webpage</h1>
 
 		<h2>Information:</h2>
@@ -16,6 +17,83 @@
 		Major: Computer Science<br>
 		Message: Welcome to my nested menu website!<br>
 
+		<!-- The menu is a unordered list of unordered lists with event listeners on the titles of the sublists
+		 When the event listeners are clicked, javascript makes them visible, scripts below -->
+		<h1>Menu:</h1>
+		<ul class="menu">
+			<li>
+				<h2 class="cars">Cars</h2>
+				<ul class="hiddenCars">
+					<li><a href="/cars/bmw">BMW</a></li>
+					<li><a href="/cars/ford">Ford</a></li>
+					<li><a href="/cars/honda">Honda</a></li>
+					<li><a href="/cars/toyota">Toyota</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2 class="cheese">Cheese</h2>
+				<ul class="hiddenCheese">
+					<li><a href="/cheese/blue">Blue Cheese</a></li>
+					<li><a href="/cheese/cheddar">Cheddar Cheese</a></li>
+					<li><a href="/cheese/gruyere">Gruyère Cheese</a></li>
+					<li><a href="/cheese/munster">Munster Cheese</a></li>
+				</ul>
+			</li>
+			<li>
+				<h2 class="guitars">Guitars</h2>
+				<ul class="hiddenGuitars">
+					<li><a href="/guitars/custom24">PRS Custom 24</a></li>
+					<li><a href="/guitars/lespaul">Gibson Les Paul</a></li>
+					<li><a href="/guitars/stratocaster">Fender Stratocaster</a></li>
+					<li><a href="/guitars/telecaster">Fender Telecaster</a></li>
+				</ul>
+			</li>
+		</ul>
+
+		<!-- 
+		 + The nested lists are hidden in the above list using CSS
+		 + The nested lists and their headers are selected
+		 + A click event is added to each header
+		 + When the header is clicked, the nested list's visibility is flipped to whatever it was not previously -->
+		<script>
+			const cars = document.querySelector(".cars");
+			const hiddenCars = document.querySelector(".hiddenCars");
+			const cheese = document.querySelector(".cheese");
+			const hiddenCheese = document.querySelector(".hiddenCheese");
+			const guitars = document.querySelector(".guitars");
+			const hiddenGuitars = document.querySelector(".hiddenGuitars");
+
+			cars.addEventListener('click', showHiddenCars);
+			cheese.addEventListener('click', showHiddenCheese);
+			guitars.addEventListener('click', showHiddenGuitars);
+
+			function showHiddenCars() {
+  				if (hiddenCars.style.display === 'block') {
+    				hiddenCars.style.display = 'none';
+  				} else {
+   					 hiddenCars.style.display = 'block';
+  				}
+			}
+
+			function showHiddenCheese() {
+  				if (hiddenCheese.style.display === 'block') {
+    				hiddenCheese.style.display = 'none';
+  				} else {
+   					 hiddenCheese.style.display = 'block';
+  				}
+			}
+
+			function showHiddenGuitars() {
+  				if (hiddenGuitars.style.display === 'block') {
+    				hiddenGuitars.style.display = 'none';
+  				} else {
+   					 hiddenGuitars.style.display = 'block';
+  				}
+			}
+			
+		</script>
+
+		<!-- Leaving visible as assignment 3 is not yet graded -->
 		<!-- Required information from the assignment specifications -->
 		<!-- <h1>Assignment 1: A Basic HTML Page</h1>  From assignment 1 -->
 		<!--<h1>Assignment 2: Time of Day</h1> -->
