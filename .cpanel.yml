@@ -3,6 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/snverse/snverse.github.io/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
     - /bin/cp cars/bmw.html $DEPLOYPATH
     - /bin/cp cars/ford.html $DEPLOYPATH
     - /bin/cp cars/honda.html $DEPLOYPATH
